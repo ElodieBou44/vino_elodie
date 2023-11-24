@@ -315,7 +315,9 @@ class CustomAuthController extends Controller
             $user->save();
             $to_name = $user->nom;
             $to_email = $request->email;
-            $body="<a href='http://localhost:8000/new-password/".$user_id."/".$temp_password.
+            // $body="<a href='http://localhost:8000/new-password/".$user_id."/".$temp_password.
+            // "'>Cliquez ici pour réinitialiser votre mot de passe</a>";
+            $body="<a href='https://sarahf29.sg-host.com/new-password/".$user_id."/".$temp_password.
             "'>Cliquez ici pour réinitialiser votre mot de passe</a>";
             Mail::send('email.mail', ['name' => $to_name, 'body' => $body], function ($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)->subject('Réinitialisation du mot de passe');
