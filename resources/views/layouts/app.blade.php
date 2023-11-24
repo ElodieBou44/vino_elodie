@@ -86,7 +86,7 @@
                 </li>
                 <li class="nav-item" id="nav-celliers">        
                     <a href="{{ route('cellier.index') }}">
-                        <figure class="nav-icon-container @if(Route::currentRouteName() == 'cellier.index') active @endif">
+                        <figure class="nav-icon-container @if(Route::currentRouteName() == 'cellier.index' || Route::currentRouteName() == 'cellier.show' || Route::currentRouteName() == 'cellier.create' || Route::currentRouteName() == 'cellier.edit') active @endif">
                             <img src="{{ asset('assets/icons/cellars_icon.svg') }}" alt="Celliers">
                             <figcaption>celliers</figcaption>
                         </figure>
