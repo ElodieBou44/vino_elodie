@@ -26,17 +26,8 @@
         </div>
         <script src="{{ asset('js/showToast.js')  }}"></script>
     @endif
-    @if($errors->any())
-        <div>
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     <div class="form-container">
-        <form action="/admin/users-create/" method="post" id="registration">
+        <form action="/admin/users-create" method="post" id="registration">
             @csrf
             <div class="form-input-container">
                 <label for="role">Rôle</label>
