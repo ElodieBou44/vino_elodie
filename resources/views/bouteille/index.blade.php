@@ -7,16 +7,16 @@
 <main class="nav-margin">
     <section class="form-ajouter-bouteille">
         <div class="form-container">
-            <form action="" method="" id="form-search" class="form-mb">
+            <form id="form-search" class="form-mb">
                 <div class="form-input-container">
-                    <label for="search">RECHERCHE</label>
+                    <label for="search-input">RECHERCHE</label>
                     <input type="search" id="search-input" name="search">
                 </div>
             </form>
             
         </div>
         <div class="form-container">
-            <form action="" method="" id="form-filter">
+            <form id="form-filter">
                 <hr>
                 <details>
                     <summary>Filtrer</summary>
@@ -40,11 +40,11 @@
                             <div class="form-range-number">      
                                 <div>
                                     <label for="min">Min</label>
-                                    <input type="number" name="prix-min" value="{{ $prixMin }}" step="0.01">
+                                    <input type="number" id="min" name="prix-min" value="{{ $prixMin }}" step="0.01">
                                 </div>    
                                 <div>
                                     <label for="max">Max</label>
-                                    <input type="number" name="prix-max" value="{{ $prixMax }}" step="0.01">
+                                    <input type="number" id="max" name="prix-max" value="{{ $prixMax }}" step="0.01">
                                 </div>    
                             </div>
                         </div>  
@@ -156,7 +156,7 @@
         </div>
         <div class="form-container">
             <hr>
-            <form action="" method="" id="">
+            <form>
                 <div class="form-input-container">
                     <label for="sort">TRIER</label>
                     <select name="sort" id="sort">
@@ -201,12 +201,11 @@
             </div>
         </div>
     </div>
-</main>
 <!-- Fenêtre modale de confirmation d'ajout -->
 <dialog id="modal-ajouter" class="modal">
     <h2>Confirmation d'ajout</h2>
     <hr>
-    <form action="" class="form-modal" id="form-ajouter">
+    <form class="form-modal" id="form-ajouter">
         <div class="form-radio">
             <input type="radio" id="location-cellier" name="location" checked >
             <label for="location-cellier">Celliers</label><br>
